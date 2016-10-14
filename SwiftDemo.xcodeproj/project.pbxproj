@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					37FCA97A1DB0D4BF009F0DD1 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = RPRE3P3ZM5;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -258,9 +259,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RPRE3P3ZM5;
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.com.58.SwiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wuba.peipei;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -270,9 +272,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RPRE3P3ZM5;
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.com.58.SwiftDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wuba.peipei;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
