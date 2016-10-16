@@ -354,6 +354,92 @@ class ViewController: UIViewController {
         
         print(sayHello(personName: "world"))
         
+        print(sayHelloWorld())
+        // prints "hello, world"
+        
+        print(sayHello(personName: "Tim", alreadyGreeted: true))
+        // prints "Hello again, Tim!"
+        
+        let bounds = minMax(array: [8, -6, 2, 109, 3, 71])
+        print("min is \(bounds.min) and max is \(bounds.max)")
+        // prints "min is -6 and max is 109"
+        
+        
+        //arithmeticMean(numbers: 1, 2, 3, 4, 5)
+        // returns 3.0, which is the arithmetic mean of these five numbers
+        //arithmeticMean(numbers: 3, 8.25, 18.75)
+        // returns 10.0, which is the arithmetic mean of these three numbers
+        
+        //输入输出参数(In-Out Parameters)
+        var someInt = 3
+        var anotherInt = 107
+        swapTwoInts(a:&someInt, &anotherInt)
+        print("someInt is now \(someInt), and anotherInt is now \(anotherInt)")
+        
+    }
+    
+    //输入输出参数(In-Out Parameters)
+    func swapTwoInts( a: inout Int, _ b: inout Int) {
+        let temporaryA = a
+        a = b
+        b = temporaryA
+    }
+    
+    //常量参数和变量参数(Constant and Variable Parameters)
+    
+    func alignRight( string: String, totalLength: Int, pad: Character) -> String {
+        var string = string
+        let amountToPad = totalLength - string.characters.count
+        if amountToPad < 1 {
+            return string
+        }
+        let padString = String(pad)
+        for _ in 1...amountToPad {
+            string = padString + string
+        }
+        return string
+    }
+
+    
+    //可变参数(Variadic Parameters)
+    
+    func arithmeticMean(numbers: Double...) -> Double {
+        var total: Double = 0
+        for number in numbers {
+            total += number
+        }
+        return total / Double(numbers.count)
+    }
+    
+    //多重返回值函数(Functions with Multiple Return Values)
+    func minMax(array: [Int]) -> (min: Int, max: Int) {
+        var currentMin = array[0]
+        var currentMax = array[0]
+        for value in array[1..<array.count] {
+            if value < currentMin {
+                currentMin = value
+            } else if value > currentMax {
+                currentMax = value
+            } }
+        return (currentMin, currentMax)
+    }
+    
+    
+    func sayHelloAgain(personName: String) -> String {
+        return "Hello again, " + personName + "!"
+    }
+    
+    
+    func sayHello(personName: String, alreadyGreeted: Bool) -> String {
+        if alreadyGreeted {
+            return sayHelloAgain(personName: personName)
+        } else {
+            return sayHello(personName: personName)
+        }
+    }
+    
+    func sayHelloWorld() -> String {
+        return "hello, world"
     }
     
     func sayHello(personName: String) -> String {
